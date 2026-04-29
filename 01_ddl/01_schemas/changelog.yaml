@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: bc722d43-d6a4-41da-99d1-e07e552fe68e
+      author: daniel2004-lsd
+      labels: "BD-01-dev,ddl,base,schema"
+      comment: "Creates the baseline schemas: mascotas."
+      changes:
+        - sqlFile:
+            path: 001_create_schemas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/01_schemas/001_create_schema_rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

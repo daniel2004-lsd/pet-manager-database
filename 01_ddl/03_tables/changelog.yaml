@@ -1,0 +1,72 @@
+databaseChangeLog:
+
+  - changeSet:
+      id:  d45d1a93-41e8-4a4f-ab32-56103673ec4e
+      author: daniel2004-lsd
+      logicalFilePath: 01_ddl/03_tables/001_create_table_duenos
+      labels: "BD-01-dev,ddl,base,duenos"
+      comment: Creates table duenos
+      changes:
+        - sqlFile:
+            path: 001_create_table_duenos.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/001_create_rollback_table_duenos.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+
+  - changeSet:
+      id: c8646e99-9d87-4c7b-b3fc-74a9c57b697b
+      author: daniel2004-lsd
+      logicalFilePath: 01_ddl/03_tables/002_create_table_mascotas
+      labels: "BD-01-dev,ddl,base,mascotas"
+      comment: Creates table mascotas
+      changes:
+        - sqlFile:
+            path: 002_create_table_mascotas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/002_create_rollback_table_mascotas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+
+  - changeSet:
+      id: b6a53aa1-a6d7-4ba3-a2ba-578830820063
+      author: daniel2004-lsd
+      logicalFilePath: 01_ddl/03_tables/003_create_table_citas
+      labels: "BD-01-dev,ddl,base,citas"
+      comment: Creates table citas
+      changes:
+        - sqlFile:
+            path: 003_create_table_citas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/003_create_rollback_table_citas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+
+  - changeSet:
+      id: ca0c6602-d406-4e24-a352-487ee43358b6
+      author: daniel2004-lsd
+      logicalFilePath: 01_ddl/03_tables/004_create_table_vacunas
+      labels: "BD-01-dev,ddl,base,vacunas"
+      comment: Creates table vacunas
+      changes:
+        - sqlFile:
+            path: 004_create_table_vacunas.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/004_create_rollback_table_vacunas.sql
+            relativeToChangelogFile: true
+            stripComments: false
